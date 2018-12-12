@@ -22,7 +22,7 @@ self.addEventListener("install", function(ev) {
   ev.waitUntil(
     caches.open(cacheItem).then(function(cache) {
       return cache.addAll(cacheStore).catch(error => {
-        console.log(error);
+        console.log(error + "");
       });
     })
   );

@@ -1,7 +1,7 @@
 let restaurants, neighborhoods, cuisines;
 var newMap;
 var markers = [];
-
+console.log("main.js");
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -141,8 +141,8 @@ resetRestaurants = restaurants => {
 
 
 /*  Registering Service Worker - 'sw' */
-if ("sw" in navigator) {
-  navigator.sw.register("/sw.js").then(
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then(
     function(reg) {
       // When reg was successful
       console.log(
